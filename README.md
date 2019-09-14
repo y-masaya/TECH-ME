@@ -18,7 +18,7 @@
 |------|----|------|
 |name|string|null:false|
 |desicription|text|null:false|
-|category|references|null:false,foreign_key: true|
+|category|references|null:false, foreign_key: true|
 |user|references|null:false|
 |comment|references|-------|
 ### Associatiton
@@ -33,7 +33,7 @@
 |------|----|------|
 |text|string|null:false|
 |user|references|null:false,foreign_key: true|
-|tech_info|references|null:false,foreign_key: true|
+|airticle|references|null:false,foreign_key: true|
 ### Associatiton
 - belongs_to :user
 - belongs_to :article
@@ -43,7 +43,7 @@
 |Column|Type|option|
 |------|----|------|
 |name|string|null: false|
-|tech_info|references|null:false,foreign_key: true|
+|airticle|references|null:false,foreign_key: true|
 ### Associatiton
 - belongs_to :user
 - belongs_to :article
