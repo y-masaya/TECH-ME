@@ -1,24 +1,58 @@
-# README
+## usersテーブル
+|Column|Type|option|
+|------|----|------|
+|nickname|string|null:false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null:false|
+|profile|text| ------ |
+|icon|string| ----- |
+### Associatiton
+- has_many :articles
+- has_many :commetns
+- has_one :image
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+## articleテーブル
+|Column|Type|option|
+|------|----|------|
+|name|string|null:false|
+|desicription|text|null:false|
+|category|references|null:false,foreign_key: true|
+|user|references|null:false|
+|comment|references|-------|
+### Associatiton
+- belongs_to :user
+- has_many :comments
+- has_many :images
+- has_many :categories
 
-* System dependencies
 
-* Configuration
+## commentテーブル
+|Column|Type|option|
+|------|----|------|
+|text|string|null:false|
+|user|references|null:false,foreign_key: true|
+|tech_info|references|null:false,foreign_key: true|
+### Associatiton
+- belongs_to :user
+- belongs_to :article
 
-* Database creation
 
-* Database initialization
+## imagesテーブル
+|Column|Type|option|
+|------|----|------|
+|name|string|null: false|
+|tech_info|references|null:false,foreign_key: true|
+### Associatiton
+- belongs_to :user
+- belongs_to :article
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## categoriesテーブル
+|Column|Type|option|
+|------|----|------|
+|name|string|null:false|
+### Associatiton
+- belongs_to :article
 
-* Deployment instructions
-
-* ...
