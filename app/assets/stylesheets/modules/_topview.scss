@@ -1,0 +1,107 @@
+.header{
+  .mainNav{
+    display: flex;
+    justify-content: center;
+    max-width: 1010px;
+    margin: 0 auto;
+    a{  
+      text-decoration: none;
+      h1{
+        font-size: 70px;
+        margin: 20px;
+        text-decoration: none;
+        font-family: 'Permanent Marker', cursive;
+        color: #669966;
+      }
+    }
+  }
+}
+.category__lists{
+  display: flex;
+  justify-content: center;
+  width: 550px;
+  margin: 15px auto;
+  border-bottom: 1px solid #e6e6e6;
+  &--tag{
+    font-size: 24px;
+    padding: 0 25px;
+    font-weight: bold;
+    a{
+      text-decoration: none;
+      color: #4C4C4C;
+      font-family: 'Crimson Pro', serif;
+    }
+  }
+}
+
+.main{
+  .block-heading{
+    text-align: center;
+    padding: 40px 0;
+    font-size: 22px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(136, 131, 131);
+  }
+  .articles{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 70%;
+    margin: 10px auto 100px;
+    .articles__post{
+      height: 200px;
+      width: 600px;
+      margin: 30px 0;
+      overflow: hidden;
+      position: relative;
+      justify-content: center;
+      box-shadow:0 2px 5px 1px rgba(0,0,0,0.1);
+      a {
+        text-decoration: none;
+        .article-info{
+          width: 600px;
+          height: 170px; 
+          &__title{
+            margin: 10px 10px 20px 10px;
+            color: #4C4C4C;
+            font-size: 20px;
+          }
+          &__text{
+            margin: 10px 10px 20px 10px;
+            color: rgb(136, 131, 131);
+            font-size: 15px;
+            height: 80px;
+          }
+          &__bottom{
+            height: 25px;
+            padding: 10px 10px 0;
+            font-size: 13px;
+            display: flex;
+            color: rgb(136, 131, 131);
+            float: right;
+            .posted-info__bottom--category{
+              margin: 0px 6px;
+            }
+            .article-info__bottom--date {
+              margin: 0px 6px 0px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagenate{
+  text-align: center;
+  padding: 0 0 40px;
+  color: rgb(136, 131, 131);
+}
+
+.footer{
+  margin: 50px 0;
+  color: #484848;
+  text-align: center;
+  font-size: 12px;
+}

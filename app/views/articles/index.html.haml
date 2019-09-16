@@ -1,0 +1,44 @@
+.header
+  .mainNav
+    .header__title
+      = link_to '' do
+        %h1 TECH ME
+  = render "shared/sidebar"
+  %ul.category__lists
+    %li.category__lists--tag
+      =link_to 'article', ''
+    %li.category__lists--tag
+      =link_to 'wifi cafe', ''
+.main
+  %h2.block-heading What’s New
+  %ul.articles
+    %li.articles__post.effect-fade.effect-scroll
+      =link_to '' do
+        .article-info
+          %p.article-info__title ここがタイトルになります。
+          %p.article-info__text ここからが記事の説明になります
+          .article-info__bottom
+            %p.posted-info__bottom--category Ruby/
+            %p.article-info__bottom--date 2019/09/26
+            %p.article-info__bottom--username 真矢
+    %li.articles__post.effect-fade.effect-scroll
+      =link_to '' do
+        .article-info
+          %p.article-info__title ここがタイトルになります。
+          %p.article-info__text ここからが記事の説明になります
+          .article-info__bottom
+            %p.posted-info__bottom--category Ruby/
+            %p.article-info__bottom--date 2019/09/26
+            %p.article-info__bottom--username 真矢
+    %li.articles__post.effect-fade.effect-scroll
+      =link_to '' do
+        .article-info
+          %p.article-info__title ここがタイトルになります。
+          %p.article-info__text ここからが記事の説明になります
+          .article-info__bottom
+            %p.posted-info__bottom--category Ruby/
+            %p.article-info__bottom--date 2019/09/26
+            %p.article-info__bottom--username 真矢
+.pagenate 1 2 Next Last
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.
