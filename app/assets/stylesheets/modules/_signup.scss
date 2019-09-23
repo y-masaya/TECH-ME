@@ -1,0 +1,44 @@
+.form-content{
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 900px;
+  .form-detail{
+    padding: 0px 0px 30px;
+    display: grid;
+    justify-content: center;
+    &__input{
+      padding: 10px;
+      .new-form{
+        display: flex;
+        align-items: center;
+        input{
+          width: 300px;
+          border-radius: 3px;
+          border: 1px solid #e6e6e6;
+          padding: 10px 16px 8px;
+        }
+      }
+    }
+  }
+  .actions{
+    text-align: center;
+    .submit_btn{
+      height: 45px;
+      width: 45%;
+      background-color: #FF5A5F;
+      border: 1px solid transparent;
+      color: #FFFFFF;
+      border-radius: 2px;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+  }
+}
+.link-account{
+  padding-top: 6px;
+  text-align: center;
+  a{
+    text-decoration: none;
+    color: rgb(3, 94, 63);
+  }
+}

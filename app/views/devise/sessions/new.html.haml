@@ -1,0 +1,18 @@
+= render "shared/header"
+%ul.category__lists
+  %li.category__lists--tag ログイン
+.form-content
+  .form
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-detail
+        .form-detail__input
+          .new-form
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"
+        .form-detail__input
+          .new-form
+            = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
+      .actions
+        = f.submit "ログイン",class: "submit_btn"
+      = render "devise/shared/links"
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.

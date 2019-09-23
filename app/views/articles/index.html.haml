@@ -1,14 +1,9 @@
-.header
-  .mainNav
-    .header__title
-      = link_to '' do
-        %h1 TECH ME
-  = render "shared/sidebar"
-  %ul.category__lists
-    %li.category__lists--tag
-      =link_to 'article', ''
-    %li.category__lists--tag
-      =link_to 'wifi cafe', ''
+= render "shared/header"
+%ul.category__lists
+  %li.category__lists--tag
+    =link_to 'article', ''
+  %li.category__lists--tag
+    =link_to 'wifi cafe', ''
 .main
   %h2.block-heading What’s New
   %ul.articles
