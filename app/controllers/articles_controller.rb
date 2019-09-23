@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def index
+    @articles = Article.all.order(id: "DESC")
   end
 
   def new
@@ -8,8 +9,16 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    unless @article.save
-      redirect_to new_article_path
+    if @article.save
+      redirect_to root_path
+    else
+      render :new
     end
   end
+
+  private
+  def article_params
+    params.require(:article).permit(:category_id, :name, :desicription).merge(user_id: current_user.id)
+  end
+
 end
