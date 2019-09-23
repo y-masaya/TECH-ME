@@ -1,0 +1,77 @@
+.sub-header{
+  padding: 20px 0;
+  text-align: center;
+  a{
+    text-decoration: none;
+  }
+  .sub-head{
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(100, 95, 95);
+    font-size: 50px;
+  }
+}
+.form-content{
+  margin: 0 auto;
+  width: 900px;
+  .input{
+    &__title{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 20px;
+    }
+    &__row{
+      border-bottom: 1px solid #e6e6e6;
+      padding: 40px 40px 0px 40px;
+      display: grid;
+      justify-content: center;
+      .post-type{
+        display: flex;
+        padding: 0 0 5px;
+        .input-name{
+          font-weight: bold;
+          color: #484848;
+        }
+        .input__row--require{
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #FFFFFF;
+          font-size: 12px;
+          display: inline-block;
+          vertical-align: text-bottom;
+          background-color: #FC642D;
+          font-family: none;
+        }
+      }
+      .text-box{
+        height: 50px;
+        width: 604px;
+        margin: 3px 0 43px;
+        border-radius: 3px;
+        border: 1px solid #e6e6e6;
+        background-color: #f5f5f5;
+      }
+      textarea{
+        min-height: 100px;
+      }
+    }
+  }
+  .input__submit{
+    text-align: center;
+    margin-top: 40px;
+    .submit_btn{
+      height: 45px;
+      width: 75%;
+      border: 1px solid transparent;
+      color: #FFFFFF;
+      border-radius: 2px;
+      cursor: pointer;
+      -webkit-appearance: none;
+      background-color: #00A699;
+      font-size: 17px;
+    }
+  }
+}
