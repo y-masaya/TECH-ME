@@ -8,7 +8,7 @@
         .post-type
           .input-name カテゴリー
           .input__row--require 必須
-        = f.select :category_id,["新品、未使用","未使用に近い","やや傷や汚れあり","全体的に状態が悪い"],{include_blank: "---"},{class:'text-box'}
+        = f.collection_select :category_id, Category.all,:id, :name,{include_blank: "---"},{class:'text-box'}
         .post-type
           .input-name タイトル (40文字以内)
           .input__row--require 必須
