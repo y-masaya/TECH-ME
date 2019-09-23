@@ -21,6 +21,7 @@
                 = article.created_at.strftime("%Y,%-m,%-d,")
               %p.article-info__bottom--username
                 = article.user.nickname
-.pagenate 1 2 Next Last
+.pagenate
+  = paginate(@articles)
 .footer
   %h3.copyright Copyright © MasayaYamashita. All rights reserved.
