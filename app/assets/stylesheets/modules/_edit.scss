@@ -1,0 +1,67 @@
+.profile{
+  background-color: #FFFFFF;
+  width: 50%;
+  margin: 20px auto 0;
+  &__user{
+    .userinfo{
+      border-bottom: 1px solid #e6e6e6;
+      width: 70%;
+      padding: 0 0 20px;
+      margin: 0 auto;
+      display: flex;
+      min-height: 160px;
+      &__avatar{
+        position: relative;
+        width: 350px;
+        label{
+          .user-icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 180px;
+            width: 180px;
+            Object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid #c8c8c8;
+          }
+        }
+      }
+      &__base{
+        width: 65%;
+        h3{
+          line-height: 139px;
+        }
+      }
+    }
+  }
+  &__introduction{
+    width: 55%;
+    margin: 20px auto 0;
+    &--content{
+
+    }
+    &__text-area{
+      width: 100%;
+      padding: 6px 10px;
+      border: 1px solid #FFFFFF;
+    }
+  }
+  &__submit{
+    text-align: center;
+    margin: 15px auto 0;
+    width: 75%;
+    submit_btn{
+      height: 45px;
+      width: 75%;
+      background-color: #FF5A5F;
+      border: 1px solid transparent;
+      color: #FFFFFF;
+      border-radius: 2px;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+  }
+}

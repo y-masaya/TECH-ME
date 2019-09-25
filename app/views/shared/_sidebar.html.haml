@@ -12,7 +12,8 @@
       %li
         = link_to '投稿する',new_article_path
       %li 質問する
-      %li マイページ
+      %li
+        =link_to 'マイページ', user_path(current_user.id)
       -if user_signed_in?
         %li
           = link_to 'ログアウト',destroy_user_session_path,class: 'user-logout-btn',method: :delete

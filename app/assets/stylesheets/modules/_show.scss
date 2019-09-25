@@ -1,0 +1,132 @@
+.user{
+  .userinfo{
+    border-bottom: 1px solid #e6e6e6;
+    width: 70%;
+    padding: 0 0 20px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 160px;
+    &__icon{
+      position: relative;
+      width: 350px;
+      label{
+        .user-icon{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          height: 180px;
+          width: 180px;
+          Object-fit: cover;
+          border-radius: 50%;
+          border: 1px solid #c8c8c8;
+        }
+      }
+    }
+    &__base{
+      width: 65%;
+      &--edit{
+        margin: 8px 0;
+        height: 35px;
+        width: 300px;
+        background-color: #FF5A5F;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        a {
+          width: 100%;
+          color: #FFFFFF;
+          text-decoration: none;
+          font-size: 14px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          line-height: 35px
+        }
+      }
+      &--profile{
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+.tab-group{
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  &__tab{
+    color: #999;
+    padding: 10px 0;
+    margin: 0 40px;
+    list-style: none;
+  }
+  .is-active{
+    color: #484848;
+    font-weight: bold;
+    border-top: 1px solid #00A699;
+    margin-top: -1px;
+  }
+}
+.panel-group{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto 10px;
+  &__panel{
+    display:none;
+    .articles{
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 0 auto 10px;
+      .articles__post{
+        height: 200px;
+        width: 600px;
+        margin: 20px 0;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        box-shadow:0 2px 5px 1px rgba(0,0,0,0.1);
+        a {
+          text-decoration: none;
+          .article-info{
+            width: 600px;
+            height: 170px; 
+            &__title{
+              margin: 10px 10px 20px 10px;
+              color: #4C4C4C;
+              font-size: 20px;
+            }
+            &__text{
+              margin: 10px 10px 20px 10px;
+              color: rgb(136, 131, 131);
+              font-size: 15px;
+              height: 80px;
+            }
+            &__bottom{
+              height: 25px;
+              padding: 10px 10px 0;
+              font-size: 13px;
+              display: flex;
+              color: rgb(136, 131, 131);
+              float: right;
+              .posted-info__bottom--category{
+                margin: 0px 6px;
+              }
+              .article-info__bottom--date {
+                margin: 0px 6px 0px 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .is-show{
+    display:block;
+}
+}
