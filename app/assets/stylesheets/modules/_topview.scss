@@ -46,13 +46,11 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100%;
-    width: 70%;
-    margin: 10px auto 10px;
+    margin: 0 auto 10px;
     .articles__post{
       height: 200px;
       width: 600px;
-      margin: 30px 0;
+      margin: 20px 0;
       overflow: hidden;
       position: relative;
       justify-content: center;

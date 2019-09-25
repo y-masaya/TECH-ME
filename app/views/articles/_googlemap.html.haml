@@ -1,0 +1,66 @@
+%div
+  #map{:style => "height: 350px; margin: 0px 280px;"}
+    :javascript
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers([
+        {
+          "lat": 35.1690944,
+          "lng": 136.886886,
+          "infowindow": "ドトールコーヒー 名古屋ミヤコ地下街店"
+        },
+        {
+          "lat": 35.1712827,
+          "lng": 136.90737880000006,
+          "infowindow": "BONCAFE栄店"
+        },
+        {
+          "lat": 35.1706377,
+          "lng": 136.9071004,
+          "infowindow": "タリーズコーヒーユニゾイン名古屋栄"
+        },
+        {
+          "lat": 35.1686248,
+          "lng": 136.90639439999995,
+          "infowindow": "上島珈琲店サカエチカ店"
+        },
+        {
+          "lat": 35.1691351,
+          "lng": 136.90592930000003,
+          "infowindow": "スターバックスコーヒー栄広小路店"
+        },
+        {
+          "lat": 35.164822,
+          "lng": 136.90428710000003,
+          "infowindow": "Maison YWE"
+        },
+        {
+          "lat": 35.1630844,
+          "lng": 136.9038283,
+          "infowindow": "THE CUPS　SAKAE"
+        },
+        {
+          "lat": 35.1630365,
+          "lng": 136.90724139999998,
+          "infowindow": "Carlova360 NAGOYA"
+        },
+        {
+          "lat": 35.1713423,
+          "lng": 136.8981672,
+          "infowindow": "ミッツコーヒースタンド （MITTS　COFFEE　STAND）"
+        },
+        {
+          "lat": 35.1616789,
+          "lng": 136.9077453,
+          "infowindow": "やば珈琲店"
+        },
+        {
+          "lat": 35.16767340000001,
+          "lng": 136.8931811,
+          "infowindow": "ロイヤルガーデンカフェ"
+        }
+        ]);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        handler.getMap().setZoom(15);
+      });

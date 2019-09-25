@@ -8,5 +8,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %link{href:"https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap", rel:"stylesheet"}
     %link{href:"https://fonts.googleapis.com/css?family=Crimson+Pro|Poppins&display=swap", rel:"stylesheet"}
+    %script{:src => "//maps.google.com/maps/api/js?v=3.23&key=AIzaSyAFWWR9Ju7IcHf7XXsWAF3PLjreNua6X40"}
+    %script{:src => "//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"}
+    %script{:src => "//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js", :type => "text/javascript"}
   %body
     = yield

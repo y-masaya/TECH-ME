@@ -63,6 +63,8 @@ gem 'active_hash'
 gem 'gretel'
 gem 'owlcarousel-rails'
 gem 'kaminari'
+gem 'gmaps4rails'
+gem 'pry-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
