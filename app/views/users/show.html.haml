@@ -1,0 +1,31 @@
+= render "shared/header"
+.user
+  .userinfo
+    .userinfo__icon
+      %label
+        = image_tag '101_h_hoso (1).png', alt: '', height: '', width: '', class: 'user-icon'
+    .userinfo__base
+      %h2.userinfo__base--name masaya
+      %h5.userinfo__base--posts 投稿数7
+      .userinfo__base--edit
+        =link_to 'プロフィールを編集', edit_user_path(current_user.id)
+      .userinfo__base--profile
+        %p こんにちわ
+.tab-group
+  %li.tab-group__tab.is-active masayaさんの投稿
+  %li.tab-group__tab お気に入り記事
+.panel-group
+  .panel-group__panel.is-show
+    %ul.articles
+      %li.articles__post.effect-fade.effect-scroll
+        =link_to '' do
+          .article-info
+            %p.article-info__title
+            %p.article-info__text
+            .article-info__bottom
+              %p.posted-info__bottom--category Ruby/
+              %p.article-info__bottom--date 
+              %p.article-info__bottom--username
+  .panel-group__panel  pppp
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.

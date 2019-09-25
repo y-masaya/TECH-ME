@@ -1,0 +1,16 @@
+= render "articles/subheader"
+.profile
+  .profile__user
+    .userinfo
+      .userinfo__avatar
+        %label
+          = image_tag '101_h_hoso (1).png', alt: '', height: '', width: '', class: 'user-icon'
+      .userinfo__base
+        %h3 真矢
+  .profile__introduction
+    %h5.profile__introduction--content Profile
+    .profile__introduction--text-area こんにちわ
+  .profile__submit
+    %submit_btn 更新
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.
