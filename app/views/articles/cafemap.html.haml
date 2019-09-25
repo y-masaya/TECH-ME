@@ -1,0 +1,30 @@
+= render "shared/header"
+%ul.category__lists
+  %li.category__lists--tag
+    =link_to 'article', root_path
+  %li.category__lists--tag
+    =link_to 'wifi cafe',cafemap_articles_path
+.main
+  %h2.block-heading Cafe Map
+  = render "googlemap"
+  - @shops.each do |shop|
+    .main-articles
+      %ul.articles
+        %li.articles__post.effect-fade.effect-scroll
+          =link_to shop.description do
+            .article-info
+              %p.article-info__title
+                = shop.name
+              %p.article-info__text
+                = shop.address
+                %br/
+                = shop.time
+                %br/
+                = shop.supply
+              .article-info__bottom
+                %p.posted-info__bottom--category
+                %p.article-info__bottom--date 
+                %p.article-info__bottom--username
+.pagenate
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.
