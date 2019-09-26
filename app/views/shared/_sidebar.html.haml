@@ -8,10 +8,12 @@
     %ul
       %li TECH ME
       %li 検索
-      %li Q & A
+      %li
+        =link_to 'Q & A', questions_path
       %li
         = link_to '投稿する',new_article_path
-      %li 質問する
+      %li
+        =link_to '質問する', new_question_path
       %li
         =link_to 'マイページ', user_path(current_user.id)
       -if user_signed_in?

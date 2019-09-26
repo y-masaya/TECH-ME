@@ -52,9 +52,11 @@ ActiveRecord::Schema.define(version: 20190925143226) do
     t.string   "title",       null: false
     t.string   "content",     null: false
     t.integer  "category_id", null: false
+    t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["category_id"], name: "index_questions_on_category_id", using: :btree
+    t.index ["user_id"], name: "index_questions_on_user_id", using: :btree
   end
 
   create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

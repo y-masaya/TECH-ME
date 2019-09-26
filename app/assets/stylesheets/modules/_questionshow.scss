@@ -1,0 +1,124 @@
+.question-show{
+  margin: 0 auto;
+  width: 900px;
+  .question-user{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+    &__left{
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      .user-icon{
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        border: 1px solid #c8c8c8;
+      }
+    }
+    &__right{
+      width: 460px;
+      &--category{
+        display: inline-block;
+        padding: 2.5px 10px;
+        margin: 7.5px 0;
+        color: #f05151;
+        border: 1px solid #c8c8c8;
+        margin-bottom: 10px;
+      }
+      &--name{
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+      &--explain{
+        font-size: 18px;
+      }
+      &--text{
+
+      }
+    }
+  }
+  .answer-show{
+   padding: 16px 80px;
+   &__title{
+    display: inline-block;
+    padding: 2.5px 10px;
+    margin: 7.5px 0;
+    color: #FF5A5F;
+    border: 1px solid #FF5A5F;
+   }
+   &__form{
+     textarea{
+      width: 95%;
+      height: 20px;
+      max-height: 200px;
+      border: none;
+      border-bottom: 1px solid #c8c8c8;
+      padding: 10px 16px 8px;
+      line-height: 20px;
+     }
+     .button{
+      display: flex;
+      justify-content: flex-end;
+      .submit_btn{
+        border: 1px solid transparent;
+        color: #FFFFFF;
+        border-radius: 2px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        height: 40px;
+        width: 80px;
+        font-size: 14px;
+        background-color: #c8c8c8;
+      }
+     }
+   }
+   &__counter{
+    display: inline-block;
+    padding: 2.5px 10px;
+    margin: 7.5px 0;
+    color: #c8c8c8;
+    border: 1px solid #c8c8c8;
+    color: #FF5A5F;
+    border: 1px solid #FF5A5F;
+   }
+   &__render{
+    .answered-user{
+      display: flex;
+      align-items: flex-start;
+      margin: 14px 0;
+      &__avatar{
+        margin-right: 12px;
+        a {
+          text-decoration: none;
+          .user-icon{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 1px solid #c8c8c8;
+        
+          }
+        }
+      }
+      &__right{
+        &--name{
+          font-size: 13px;
+          a {
+            text-decoration: none;
+          }
+          .created_at{
+            color: #767676;
+            font-size: 12px;
+            float: right;
+            margin: 0px 100px 0px 0px;
+          }
+        }
+        &__text{
+          font-size: 14px;
+        }
+      }
+    }
+   }
+  }
+}

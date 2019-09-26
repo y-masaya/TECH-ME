@@ -20,4 +20,7 @@ Rails.application.routes.draw do
       get :user_signup
     end
   end
+
+  resources :questions
+  
 end
