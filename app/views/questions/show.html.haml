@@ -1,0 +1,31 @@
+= render "shared/header"
+.main
+  %h2.block-heading Question
+  .question-show
+    .question-user
+      .question-user__left
+        = image_tag '101_h_hoso (1).png', alt: '', height: '', width: '', class: 'user-icon'
+      .question-user__right
+        .question-user__right--category ruby
+        .question-user__right--name masaya
+        .question-user__right--explain 質問内容：
+        .question-user__right--text
+    .answer-show
+      .answer-show__title コメント
+      .answer-show__form
+        %textarea
+        .button
+          %button.submit_btn 提案
+      .answer-show__counter 3件の提案
+      .answer-show__render
+        .answered-user
+          .answered-user__avatar
+            =link_to '' do
+              = image_tag '101_h_hoso (1).png', alt: '', height: '', width: '', class: 'user-icon'
+          .answered-user__right
+            .answered-user__right--name
+              =link_to 'name',''
+              .created_at 4日前
+            .answered-user__right--text aaaaaaaaaaaaaaaaaaa
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.

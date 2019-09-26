@@ -1,0 +1,22 @@
+= render "shared/header"
+.form-content
+  = form_for @question do |f|
+    .input
+      %h2.input__title 質問する内容
+      .input__row
+        .post-type
+          .input-name カテゴリー
+          .input__row--require 必須
+        = f.collection_select :category_id, Category.all,:id, :name,{include_blank: "---"},{class:'text-box'}
+        .post-type
+          .input-name タイトル (40文字以内)
+          .input__row--require 必須
+        = f.text_field :title,class:'text-box',placeholder:"タイトルを入力して下さい"
+        .post-type
+          .input-name 質問の内容
+          .input__row--require 必須
+        = f.text_area :content,class:'text-box',placeholder:"質問の内容を入力して下さい"
+      .input__submit
+        = f.submit 'POST', class:'submit_btn'
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.
