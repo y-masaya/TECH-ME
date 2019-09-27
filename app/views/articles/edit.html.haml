@@ -1,0 +1,22 @@
+= render "subheader"
+.form-content
+  = form_for @article do |f|
+    .input
+      %h2.input__title 投稿する内容
+      .input__row
+        .post-type
+          .input-name カテゴリー
+          .input__row--require 必須
+        = f.collection_select :category_id, Category.all,:id, :name,{include_blank: "---"},{class:'text-box'}
+        .post-type
+          .input-name タイトル (40文字以内)
+          .input__row--require 必須
+        = f.text_field :name,class:'text-box',placeholder:"タイトルを入力して下さい"
+        .post-type
+          .input-name 記事の内容
+          .input__row--require 必須
+        = f.text_area :desicription,class:'text-box',placeholder:"記事の内容を入力して下さい"
+      .input__submit
+        = f.submit 'PUT', class:'submit_btn'
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.

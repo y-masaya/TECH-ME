@@ -9,14 +9,14 @@
   - @articles.each do |article|
     %ul.articles
       %li.articles__post.effect-fade.effect-scroll
-        =link_to '' do
+        =link_to article_path(article.id) do
           .article-info
             %p.article-info__title
               = article.name
             %p.article-info__text
               =article.desicription
             .article-info__bottom
-              %p.posted-info__bottom--category Ruby/
+              %p.posted-info__bottom--category
               %p.article-info__bottom--date 
                 = article.created_at.strftime("%Y,%-m,%-d,")
               %p.article-info__bottom--username

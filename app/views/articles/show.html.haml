@@ -1,0 +1,40 @@
+= render "shared/header"
+.main
+  %h2.block-heading article
+  .image-content
+    .image-content__post
+      .image-content__post--title
+        %h2
+          = @posts.name
+      .image-content__post--detail
+        .post-explain
+          .text-product
+            %p
+              = safe_join(@posts.desicription.split("\n"), tag(:br))
+          - if current_user.id == @posts.user_id
+            .edit-btn
+              =link_to edit_article_path do
+                = fa_icon 'edit'
+              =link_to article_path, method: :delete do
+                = fa_icon 'trash'
+          .sub-title 
+            = "カテゴリー: #{@category.name}"
+          .upload-time
+            = @posts.created_at.strftime("%Y年%-m月 %-d日%H:%M")
+          .posted-user
+            .posted-user__name
+              =link_to '' do
+                = image_tag '101_h_hoso (1).png', alt: '', height: '', width: '', class: 'user-icon'
+                .user-name
+                  = @posts.user.nickname
+            .posted-user__btn
+              =link_to 'お気に入り'
+        .comment-header
+          .comment-header__form
+            %textarea
+            %button.submit_btn コメント
+        .comment-counter
+        .comments
+        .page-nav
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.
