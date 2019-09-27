@@ -79,7 +79,7 @@ span {
   display: flex;
 flex-direction: column;
 justify-content: center;
-  font-size: 29px;
+  font-size: 25px;
   padding-left: 0;
   transform: translateX(-100%);
   transition:  transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -92,7 +92,7 @@ justify-content: center;
 #gloval-nav {
 a {
   display: inline-block;
-  color: #000;
+  color: #669966;
   text-decoration: none;
   padding: 10px 0;
   transition: color .6s ease;
@@ -105,7 +105,7 @@ ul {
     transform: translateX(-200px);
     transition:  transform 1.3s ease;
     position: relative;
-    
+
     &:after {
       content: "";
       display: block;
@@ -138,6 +138,39 @@ ul {
     &:nth-child(7) {
       transition-delay: .9s;
     }
+  }
+  .header__search{
+    padding: 0;
+    input{
+      padding-left: 50px;
+      height: 35px;
+      width: 105%;
+      font-size: 16px;
+      border: none;
+      border-bottom: 1px solid #e6e6e6;
+      margin: 0 0 15px;
+    }
+    button{
+
+    }
+    label{
+      i {
+        font-size: 18px;
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        color: #484848;
+        padding: 3px 7px 3px 0;
+        border-right: 1px solid #e6e6e6;
+        cursor: pointer;
+      }
+    }
+  }
+  .title{
+    font-family: 'Permanent Marker', cursive;
+    color: #669966;
+    padding: 0px 0px 30px;
+    font-size: 30px;
   }
 }
 

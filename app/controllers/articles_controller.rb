@@ -51,7 +51,10 @@ class ArticlesController < ApplicationController
     end
   end
 
-
+  def search
+    # binding.pry
+    @articles = Article.where('name LIKE(?)',"%#{params[:keyword]}%")
+  end
 
 
 

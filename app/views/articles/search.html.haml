@@ -1,0 +1,27 @@
+= render "shared/header"
+%ul.category__lists
+  %li.category__lists--tag
+    =link_to 'article', ''
+  %li.category__lists--tag
+    =link_to 'wifi cafe',cafemap_articles_path
+.main
+  %h2.block-heading Search
+  .search-items
+    = "#{params[:keyword]}の検索結果  #{@articles.count}件"
+  - @articles.each do |article|
+    %ul.articles
+      %li.articles__post.effect-fade.effect-scroll
+        =link_to article_path(article.id) do
+          .article-info
+            %p.article-info__title
+              = article.name
+            %p.article-info__text
+              =article.desicription
+            .article-info__bottom
+              %p.posted-info__bottom--category
+              %p.article-info__bottom--date 
+                = article.created_at.strftime("%Y,%-m,%-d,")
+              %p.article-info__bottom--username
+                = article.user.nickname
+.footer
+  %h3.copyright Copyright © MasayaYamashita. All rights reserved.
