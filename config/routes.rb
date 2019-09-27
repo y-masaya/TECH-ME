@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :articles do
     collection do
       get :cafemap
+      get :search
     end
   end
 

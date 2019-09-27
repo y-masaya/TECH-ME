@@ -6,8 +6,13 @@
 #gloval-nav
   %nav
     %ul
-      %li TECH ME
-      %li 検索
+      %li.title TECH ME
+      %li.header__search
+        = form_tag('/articles/search',class: "header-search__input", method: :get) do
+          %input.header-search__input--text{name: "keyword", placeholder: "何かお探しですか?", type: "text", value: ""}/
+          -# %button.header-search__input--icon{title: "検索", type: "submit"}
+          %label
+            = fa_icon 'search', class: "search"
       %li
         =link_to 'Q & A', questions_path
       %li
