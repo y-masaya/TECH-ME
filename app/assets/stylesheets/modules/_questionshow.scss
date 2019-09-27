@@ -37,6 +37,23 @@
       &--text{
 
       }
+      &--edit{
+        font-size: 23px;
+        justify-content: space-evenly;
+        width: 100px;
+        a {
+          text-decoration: none;
+          i {
+            height: 30px;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            color: #484848;
+          }
+        }
+      }
     }
   }
   .answer-show{

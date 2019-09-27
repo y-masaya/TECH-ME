@@ -8,10 +8,12 @@
       .question-user__right
         .question-user__right--category ruby
         .question-user__right--name masaya
-        .question-user__right--explain 質問内容：
-        .question-user__right--text llllllllllllllllllllllllllllll
-        .edit-btn
-          =link_to '' do
+        .question-user__right--explain 
+          = "質問内容：#{@question.title}"
+        .question-user__right--text
+          = safe_join(@question.content.split("\n"), tag(:br))
+        .question-user__right--edit
+          =link_to edit_question_path do
             = fa_icon 'edit'
           =link_to question_path, method: :delete do
             = fa_icon 'trash'
