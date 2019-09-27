@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :set_article, only: [:edit, :update, :destroy]
+
   def index
     @articles = Article.all.order(id: "DESC").page(params[:page]).per(5)
     @categores = Category.all
@@ -24,11 +26,9 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to root_path
     else
@@ -41,7 +41,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     if @article.user_id == current_user.id
         if @article.destroy
           redirect_to  root_path, notice: '商品を削除しました'
@@ -52,13 +51,19 @@ class ArticlesController < ApplicationController
     end
   end
 
+
+
+
+
+
   private
+
   def article_params
     params.require(:article).permit(:category_id, :name, :desicription).merge(user_id: current_user.id)
   end
 
   def set_article
-    @posts = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
 end
