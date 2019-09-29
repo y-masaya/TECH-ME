@@ -53,6 +53,6 @@ test:
 production:
   <<: *default
   database: TECH-ME_production
-  username: TECH-ME
+  username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
