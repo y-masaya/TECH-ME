@@ -26,7 +26,7 @@
   [17, 'エラー関係'], 
   [18, 'その他']
 ].each do |id, name|
-  Category.create!(
+  Category.create(
     {id: id, name: name}
   )
 end
@@ -44,7 +44,7 @@ end
   [10, 'タリーズコーヒーユニゾイン名古屋栄', '愛知県名古屋市中区錦3-16-30 ユニゾイン名古屋栄 1F', '7:00～22:00', '', 'Free Wi-Fiあり', 'https://map.tullys.co.jp/tullys/detailMap?account=tullys&bid=714'],
   [11, 'ドトールコーヒー 名古屋ミヤコ地下街店', '愛知県名古屋市中村区名駅4丁目9-10', '7:15～20:15', '', 'Free Wi-Fiあり', 'https://tabelog.com/aichi/A2301/A230101/23005070/']
 ].each do |id, name, address, time, image, supply, description|
-  Shop.create!(
+  Shop.create(
     {id: id, name: name, address: address, time: time, image: image, supply: supply, description: description}
   )
 end
