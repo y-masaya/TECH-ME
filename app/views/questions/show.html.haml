@@ -19,20 +19,14 @@
             = fa_icon 'trash'
     .answer-show
       .answer-show__title コメント
-      .answer-show__form
-        %textarea
-        .button
-          %button.submit_btn 提案
-      .answer-show__counter 3件の提案
+      = form_for([@question, @comment], url: question_comments_path(@question.id)) do |f|
+        .answer-show__form
+          = f.text_area :comment, class:'text-box'
+          .button
+            = f.submit "コメントする", class:'submit_btn'
+      .answer-show__counter
+        = "#{@comments.count}件の提案"
       .answer-show__render
-        .answered-user
-          .answered-user__avatar
-            =link_to '' do
-              = image_tag '101_h_hoso (1).png', alt: '', height: '', width: '', class: 'user-icon'
-          .answered-user__right
-            .answered-user__right--name
-              =link_to 'name',''
-              .created_at 4日前
-            .answered-user__right--text aaaaaaaaaaaaaaaaaaa
+        = render partial: "shared/comment", collection: @comments
 .footer
   %h3.copyright Copyright © MasayaYamashita. All rights reserved.

@@ -23,6 +23,8 @@ class ArticlesController < ApplicationController
     @posts = Article.find(params[:id])
     category = @posts.category_id
     @category = Category.find(category)
+    @comment = Comment.new
+    # @comments = ProductComment.where(product_id: @product.id)
   end
 
   def edit

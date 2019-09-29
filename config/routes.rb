@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :questions
+  resources :questions do
+    resources :comments, only: [:create, :destroy]
+  end
   
 end

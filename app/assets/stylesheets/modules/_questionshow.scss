@@ -66,7 +66,7 @@
     border: 1px solid #FF5A5F;
    }
    &__form{
-     textarea{
+     .text-box{
       width: 95%;
       height: 20px;
       max-height: 200px;
@@ -85,7 +85,7 @@
         cursor: pointer;
         -webkit-appearance: none;
         height: 40px;
-        width: 80px;
+        width: 110px;
         font-size: 14px;
         background-color: #c8c8c8;
       }

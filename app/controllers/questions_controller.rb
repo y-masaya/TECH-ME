@@ -21,6 +21,8 @@ class QuestionsController < ApplicationController
   def show
     category = @question.category_id
     @category = Category.find(category)
+    @comment = Comment.new
+    @comments = Comment.where(question_id: @question.id)
   end
 
   def edit

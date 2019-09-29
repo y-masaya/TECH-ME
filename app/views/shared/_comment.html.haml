@@ -1,0 +1,39 @@
+- if comment.user.id == current_user.id
+  %li.messeage-coments2
+    .message-user2
+      = link_to "#", class: "product-detail__middle__comments-box__avatar2" do
+        %figure
+          .unknown
+            = image_tag("101_h_hoso (1).png", size: "32x32")
+          %figcaption.bold #{comment.user.nickname}
+    .message-body2
+      .message-body2__text
+        = simple_format(comment.comment)
+      .message-body2__icon__left
+        %time
+          %i.far.fa-clock
+          %span
+      .message-body2__icon__right
+        = link_to "" do
+          = fa_icon 'trash'
+- else
+  %li.messeage-coments
+    .message-user
+      = link_to "#", class: "product-detail__middle__comments-box__avatar" do
+        %figure
+          .message-user__unknown
+            = image_tag("101_h_hoso (1).png", size: "32x32")
+          %figcaption.bold #{comment.user.nickname}
+        - if comment.user.id == @question.user_id
+          .message-seller
+            質問者
+    .message-body
+      .message-body__text
+        = simple_format(comment.comment)
+      .message-body__icon__left
+        %time
+          %i.far.fa-clock
+          %span
+      .message-body__icon__right
+        = link_to "" do
+          = fa_icon 'trash'
