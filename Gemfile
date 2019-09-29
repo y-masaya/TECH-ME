@@ -65,6 +65,7 @@ gem 'owlcarousel-rails'
 gem 'kaminari'
 gem 'gmaps4rails'
 gem 'pry-rails'
+gem 'rails-i18n'
 
 group :production do
   gem 'unicorn', '5.4.1'
