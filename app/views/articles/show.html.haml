@@ -30,8 +30,9 @@
             .posted-user__btn
               =link_to 'お気に入り'
         .comment-header
+        = form_for([@posts, @comment], url: article_article_comments_path(@posts.id)) do |f|
           .comment-header__form
-            %textarea
+            = f.text_area :comment, class:'text-box'
             %button.submit_btn コメント
         .comment-counter
         .comments
