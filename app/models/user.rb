@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :commetns
   has_many :questions
   has_one :image
+
+  validates :nickname, presence: true, length: { minimum: 2 }
 end
