@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     category = @posts.category_id
     @category = Category.find(category)
     @comment = Comment.new
-    # @comments = ProductComment.where(product_id: @product.id)
+    @comments = Comment.where(article_id: @posts.id)
   end
 
   def edit
