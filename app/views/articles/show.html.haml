@@ -33,9 +33,11 @@
         = form_for([@posts, @comment], url: article_article_comments_path(@posts.id)) do |f|
           .comment-header__form
             = f.text_area :comment, class:'text-box'
-            %button.submit_btn コメント
-        .comment-counter
-        .comments
-        .page-nav
+            .button
+              = f.submit "コメント", class:'submit_btn'
+        .answer-show__counter
+          = "#{@comments.count}件のコメント"
+        .answer-show__render
+          = render partial: "shared/articlecomment", collection: @comments, :as => "articlecomment"
 .footer
   %h3.copyright Copyright © MasayaYamashita. All rights reserved.

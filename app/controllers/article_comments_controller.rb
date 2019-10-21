@@ -4,11 +4,26 @@ class ArticleCommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.new(comment_params)
     if @comment.save
-      redirect_to article_path(@question.id)
+      redirect_to article_path(@article.id)
     else
       render :create
     end
   end
+
+  def destroy
+    @comment= Comment.find(params[:id])
+    if @comment.user_id == current_user.id
+        if @comment.destroy
+          redirect_to article_path(params[:article_id]), notice: 'コメントを削除しました'
+        end
+    else
+      render :index
+      flash[:alert] = 'コメント削除に失敗しました'
+    end
+  end
+
+
+
 
 
   private
